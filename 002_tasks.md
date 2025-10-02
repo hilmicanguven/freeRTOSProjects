@@ -120,4 +120,61 @@ Task Control Block
 | **Event List Item**          | Used if the task is waiting on an event or queue.                                           |
 | **TCB extension (optional)** | For things like MPU settings, tracing info, runtime stats.                                  |
 
-*/
+# Task States
+
+Task'ın içinde bulunabileceği state'ler vardır
+
+Running
+
+Non-Running : Suspended, Ready, Blocked
+
+### Running State
+    - CPU'da şu an çalışan state'dir. Aynı anda yalnızca 1 1 adet running task olur.
+    - pre-empt edilirse veya YIELD çağırırsa Ready'e geri döner.
+
+### Ready State
+    Schedule edilmeye bekleyen task'lardır. schedule edilirse running state'e geçer.
+
+### Blocked State
+    - bir şeyleri (internal or external (queue, semaphore, mutex) event) bekliyor demektedir. CPU süresi tüketmez. yalnızca running state'den buraya gelebilir.
+    - `vTaskDelay()` fonksiyonunu çağırarak blocked state e geçer. yeterli süre geçince tekrar ready state e geçer.
+    - `xTaskAbortDelay()` çağrısı ile event oluşmaksızın tekrar ready state'e geçiş yapar.
+    - 
+
+### Suspended State
+    - `vTaskSuspend(task_handle)` çağrısı ile bir task başka bir task'ı suspended state'e gönderebilir.
+    - bunun tersi olarak da `vTaskResume(task_handle)` ile gerçekleştirilir. suspended state'e tekrar ready state' e döner.
+
+# Task Delay APIs
+
+CPU'yu meşgul etmeden task'ı ertelemek için kullanılır. for/while loop delay'ler cpu'yu çalıştırdığı için verimli bir yöntem kesinlikle değildir. kolay olduğu için kullanılır ancak tercih edilmez.
+
+- `vTaskDelay()` : belirli bir tick süresi kadar delay sağlar. başka bir task tarafından bloklanabilir.
+- `vTaskDelayUntil()` :  sağladığı delay'a ilaveten task'ın blocked olarak kalacağı maksimum absolute bir süre belirler. bir led'in yanıp sönmesinde 1 saniyeyi geçmemesini istersek bunu garanti etmek adına bu arayüz kullanılır.
+
+Delay arayüzlerinde süreyi "Tick Sayısı" olarak belirtiriz. daha önce de gördüğmüz configTICK_RATE_HZ değerine göre bu arayüzleri hangi sayıyı vereceğimizi belirtiriz.
+1000Hz olduğu durumda, her tick 1ms sürer, 100ms delay için fonksiyonlara 100 verebiliriz.
+hazır arayüzler mevcut bu dönüşümü yapan "pdMS_TO_TICK".
+
+**Periodic Task:** sürekli olarak sırası gelince çalışan task'lardır. ancak belirli periyotta çalışması gereklidir. o nednele `vTaskDelayUntil()` kullanırız `vTaskDelay()` yerine. 
+**Aperiodic Task:** belirli bie event olunca çalışan task'lardır. asynchronous bir event oluşması gereklidir.
+
+# Task Notification APIs
+
+Task'lar oluşturulurken 32-bit'lik bir notification_value ya sahiptir ve Zero ile ilklendirilir. Bir task başka bir task'a bildirim gönderebilir (**notification event**) ve unblock yapabilir. hatta alıcı task'ın notification değerini değiştirebilir. Bunu parametre yardımıyla bit-wise yapar.
+
+- `xTaskNotifyWait()`
+
+    Bir event/notification beklemek için kullanılır. opsiyonel olarak bir timeout belirleyebilir bu bekleme süresi için. CPU zamanı tüketmez. input argument ile fonksiyona giriş ve çıkış esnasında notification value'daki clear edeceği bit'leri belirler. bekleyeceği maksimum süre tick cinsiden son parametre ile verilir. bir event gelip un-blocked olursa true döner. aksi halde false döner.
+    ```cpp
+    BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait );
+    ```
+
+- `xTaskNotify()`
+
+    Notify göndermek için kullanılır. bekleyen bir task'ı unblock eder. karşı task'ın notification değeri modify edebilir. artırabilir veya bazı bitlerini set edebilir.
+
+    **Not** ISR içerisinde çağırılmamalıdır. bunun yerin ..fromISR() fonksiyonu kullanılabilir.
+    ```cpp
+    BaseType_t xTaskNotify( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction );
+    ```

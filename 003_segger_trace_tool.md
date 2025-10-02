@@ -33,3 +33,5 @@ freeRTOS içerisinde neler olup bittiğini daha iyi anlamak için bazı "trace t
 
     herhangi bir debugger'a ihtiyaç duyulmaz. application içerisinde manual olarak başlatılabilir.
     Yine benzer software layer'lar koda eklenir ve çıktı olarak .SVD uzantılı bir dosya oluşturur.
+
+# Continious UART based Recording
