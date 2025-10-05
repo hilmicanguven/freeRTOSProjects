@@ -1,7 +1,7 @@
 ../ThirdParty/tasks.c:1620:20:prvCreateTask	48	static
 ../ThirdParty/tasks.c:1718:16:xTaskCreate	40	static
 ../ThirdParty/tasks.c:1793:13:prvInitialiseNewTask	40	static,ignoring_inline_asm
-../ThirdParty/tasks.c:2019:17:prvAddNewTaskToReadyList	24	static
+../ThirdParty/tasks.c:2019:17:prvAddNewTaskToReadyList	24	static,ignoring_inline_asm
 ../ThirdParty/tasks.c:2191:10:vTaskDelete	32	static,ignoring_inline_asm
 ../ThirdParty/tasks.c:2343:16:xTaskDelayUntil	48	static,ignoring_inline_asm
 ../ThirdParty/tasks.c:2435:10:vTaskDelay	24	static,ignoring_inline_asm

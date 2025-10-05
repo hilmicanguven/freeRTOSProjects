@@ -1,0 +1,119 @@
+22:07:18 **** Incremental Build of configuration Debug for project tasksWithLeds ****
+make -j8 all 
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_conf.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/Target/usbh_conf.d" -MT"USB_HOST/Target/usbh_conf.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_conf.o"
+arm-none-eabi-gcc "../USB_HOST/Target/usbh_platform.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/Target/usbh_platform.d" -MT"USB_HOST/Target/usbh_platform.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/Target/usbh_platform.o"
+arm-none-eabi-gcc "../USB_HOST/App/usb_host.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"USB_HOST/App/usb_host.d" -MT"USB_HOST/App/usb_host.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "USB_HOST/App/usb_host.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/croutine.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/croutine.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/croutine.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty" -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/event_groups.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/event_groups.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/event_groups.o"
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:34:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:31:10: error: #include expects "FILENAME" or <FILENAME>
+   31 | #include CMSIS_device_header
+      |          ^~~~~~~~~~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:100:4: error: #error "Definition INCLUDE_xSemaphoreGetMutexHolder must equal 1 to implement Mutex Management API."
+  100 |   #error "Definition INCLUDE_xSemaphoreGetMutexHolder must equal 1 to implement Mutex Management API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:143:4: error: #error "Definition INCLUDE_xTaskGetSchedulerState must equal 1 to implement Kernel Information and Control API."
+  143 |   #error "Definition INCLUDE_xTaskGetSchedulerState must equal 1 to implement Kernel Information and Control API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:152:4: error: #error "Definition INCLUDE_uxTaskGetStackHighWaterMark must equal 1 to implement Thread Management API."
+  152 |   #error "Definition INCLUDE_uxTaskGetStackHighWaterMark must equal 1 to implement Thread Management API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:177:4: error: #error "Definition INCLUDE_eTaskGetState must equal 1 to implement Thread Management API."
+  177 |   #error "Definition INCLUDE_eTaskGetState must equal 1 to implement Thread Management API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:208:6: error: #error "Definition INCLUDE_xTimerPendFunctionCall must equal 1 to implement Event Flags API."
+  208 |     #error "Definition INCLUDE_xTimerPendFunctionCall must equal 1 to implement Event Flags API."
+      |      ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:299:4: error: #error "Definition configMAX_PRIORITIES must equal 56 to implement Thread Management API."
+  299 |   #error "Definition configMAX_PRIORITIES must equal 56 to implement Thread Management API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_os2.h:307:4: error: #error "Definition configUSE_PORT_OPTIMISED_TASK_SELECTION must be zero to implement Thread Management API."
+  307 |   #error "Definition configUSE_PORT_OPTIMISED_TASK_SELECTION must be zero to implement Thread Management API."
+      |    ^~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'SVC_Setup':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:179:3: warning: implicit declaration of function 'NVIC_SetPriority' [-Wimplicit-function-declaration]
+  179 |   NVIC_SetPriority (SVCall_IRQ_NBR, 0U);
+      |   ^~~~~~~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:80:36: error: 'IRQn_Type' undeclared (first use in this function)
+   80 | #define SVCall_IRQ_NBR            (IRQn_Type) -5        /* SVCall_IRQ_NBR added as SV_Call handler name is not the same for CM0 and for all other CMx */
+      |                                    ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:179:21: note: in expansion of macro 'SVCall_IRQ_NBR'
+  179 |   NVIC_SetPriority (SVCall_IRQ_NBR, 0U);
+      |                     ^~~~~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:80:36: note: each undeclared identifier is reported only once for each function it appears in
+   80 | #define SVCall_IRQ_NBR            (IRQn_Type) -5        /* SVCall_IRQ_NBR added as SV_Call handler name is not the same for CM0 and for all other CMx */
+      |                                    ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:179:21: note: in expansion of macro 'SVCall_IRQ_NBR'
+  179 |   NVIC_SetPriority (SVCall_IRQ_NBR, 0U);
+      |                     ^~~~~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetCount':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:401:19: error: 'SysTick' undeclared (first use in this function)
+  401 |   uint32_t load = SysTick->LOAD;
+      |                   ^~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetOverflow':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:407:12: error: 'SysTick' undeclared (first use in this function)
+  407 |   return ((SysTick->CTRL >> 16) & 1U);
+      |            ^~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetInterval':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:412:11: error: 'SysTick' undeclared (first use in this function)
+  412 |   return (SysTick->LOAD + 1U);
+      |           ^~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'osThreadGetStackSpace':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:562:21: warning: implicit declaration of function 'uxTaskGetStackHighWaterMark'; did you mean 'INCLUDE_uxTaskGetStackHighWaterMark'? [-Wimplicit-function-declaration]
+  562 |     sz = (uint32_t)(uxTaskGetStackHighWaterMark(hTask) * sizeof(StackType_t));
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                     INCLUDE_uxTaskGetStackHighWaterMark
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:57: warning: "eventCLEAR_EVENTS_ON_EXIT_BIT" redefined
+   57 |         #define eventCLEAR_EVENTS_ON_EXIT_BIT   0x01000000UL
+      | 
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:40:
+D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include/event_groups.h:48: note: this is the location of the previous definition
+   48 |     #define eventCLEAR_EVENTS_ON_EXIT_BIT    ( ( uint32_t ) 0x01000000U )
+      | 
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:58: warning: "eventUNBLOCKED_DUE_TO_BIT_SET" redefined
+   58 |         #define eventUNBLOCKED_DUE_TO_BIT_SET   0x02000000UL
+      | 
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:40:
+D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include/event_groups.h:49: note: this is the location of the previous definition
+   49 |     #define eventUNBLOCKED_DUE_TO_BIT_SET    ( ( uint32_t ) 0x02000000U )
+      | 
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:59: warning: "eventWAIT_FOR_ALL_BITS" redefined
+   59 |         #define eventWAIT_FOR_ALL_BITS                  0x04000000UL
+      | 
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:40:
+D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include/event_groups.h:50: note: this is the location of the previous definition
+   50 |     #define eventWAIT_FOR_ALL_BITS           ( ( uint32_t ) 0x04000000U )
+      | 
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:60: warning: "eventEVENT_BITS_CONTROL_BYTES" redefined
+   60 |         #define eventEVENT_BITS_CONTROL_BYTES   0xff000000UL
+      | 
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c:40:
+D:/freeRTOS/rtos_workspace/tasksWithLeds/ThirdParty/include/event_groups.h:51: note: this is the location of the previous definition
+   51 |     #define eventEVENT_BITS_CONTROL_BYTES    ( ( uint32_t ) 0xff000000U )
+      | 
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'osMutexGetOwner':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:1473:27: warning: implicit declaration of function 'xSemaphoreGetMutexHolder'; did you mean 'INCLUDE_xSemaphoreGetMutexHolder'? [-Wimplicit-function-declaration]
+ 1473 |     owner = (osThreadId_t)xSemaphoreGetMutexHolder (hMutex);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                           INCLUDE_xSemaphoreGetMutexHolder
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetCount':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:403:1: warning: control reaches end of non-void function [-Wreturn-type]
+  403 | }
+      | ^
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetOverflow':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:408:1: warning: control reaches end of non-void function [-Wreturn-type]
+  408 | }
+      | ^
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: In function 'OS_Tick_GetInterval':
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:413:1: warning: control reaches end of non-void function [-Wreturn-type]
+  413 | }
+      | ^
+make: *** [Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk:19: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+22:07:20 Build Failed. 14 errors, 10 warnings. (took 1s.183ms)
+

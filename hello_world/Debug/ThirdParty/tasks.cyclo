@@ -1,7 +1,7 @@
 ../ThirdParty/tasks.c:1620:20:prvCreateTask	4
 ../ThirdParty/tasks.c:1718:16:xTaskCreate	2
 ../ThirdParty/tasks.c:1793:13:prvInitialiseNewTask	8
-../ThirdParty/tasks.c:2019:17:prvAddNewTaskToReadyList	5
+../ThirdParty/tasks.c:2019:17:prvAddNewTaskToReadyList	7
 ../ThirdParty/tasks.c:2191:10:vTaskDelete	12
 ../ThirdParty/tasks.c:2343:16:xTaskDelayUntil	11
 ../ThirdParty/tasks.c:2435:10:vTaskDelay	4
@@ -10,16 +10,16 @@
 ../ThirdParty/tasks.c:2643:17:uxTaskPriorityGetFromISR	2
 ../ThirdParty/tasks.c:2691:17:uxTaskBasePriorityGet	2
 ../ThirdParty/tasks.c:2717:17:uxTaskBasePriorityGetFromISR	2
-../ThirdParty/tasks.c:2765:10:vTaskPrioritySet	14
+../ThirdParty/tasks.c:2765:10:vTaskPrioritySet	15
 ../ThirdParty/tasks.c:3121:10:vTaskSuspend	12
 ../ThirdParty/tasks.c:3283:23:prvTaskIsTaskSuspended	7
-../ThirdParty/tasks.c:3353:10:vTaskResume	5
+../ThirdParty/tasks.c:3353:10:vTaskResume	6
 ../ThirdParty/tasks.c:3414:16:xTaskResumeFromISR	5
 ../ThirdParty/tasks.c:3511:19:prvCreateIdleTasks	5
 ../ThirdParty/tasks.c:3665:6:vTaskStartScheduler	3
 ../ThirdParty/tasks.c:3768:6:vTaskEndScheduler	2
 ../ThirdParty/tasks.c:3811:6:vTaskSuspendAll	1
-../ThirdParty/tasks.c:3956:12:xTaskResumeAll	12
+../ThirdParty/tasks.c:3956:12:xTaskResumeAll	13
 ../ThirdParty/tasks.c:4106:12:xTaskGetTickCount	1
 ../ThirdParty/tasks.c:4125:12:xTaskGetTickCountFromISR	1
 ../ThirdParty/tasks.c:4160:13:uxTaskGetNumberOfTasks	1
@@ -28,7 +28,7 @@
 ../ThirdParty/tasks.c:4465:22:xTaskGetIdleTaskHandle	2
 ../ThirdParty/tasks.c:4479:18:xTaskGetIdleTaskHandleForCore	3
 ../ThirdParty/tasks.c:4546:12:xTaskCatchUpTicks	2
-../ThirdParty/tasks.c:4670:12:xTaskIncrementTick	10
+../ThirdParty/tasks.c:4670:12:xTaskIncrementTick	13
 ../ThirdParty/tasks.c:5056:10:vTaskSwitchContext	4
 ../ThirdParty/tasks.c:5243:6:vTaskPlaceOnEventList	2
 ../ThirdParty/tasks.c:5272:6:vTaskPlaceOnUnorderedEventList	3
@@ -40,7 +40,7 @@
 ../ThirdParty/tasks.c:5603:6:vTaskMissedYield	1
 ../ThirdParty/tasks.c:5616:17:uxTaskGetTaskNumber	2
 ../ThirdParty/tasks.c:5643:10:vTaskSetTaskNumber	2
-../ThirdParty/tasks.c:5748:8:prvIdleTask	1
+../ThirdParty/tasks.c:5748:8:prvIdleTask	2
 ../ThirdParty/tasks.c:6011:13:prvInitialiseTaskLists	2
 ../ThirdParty/tasks.c:6043:13:prvCheckTasksWaitingTermination	2
 ../ThirdParty/tasks.c:6121:10:vTaskGetInfo	10
@@ -57,7 +57,7 @@
 ../ThirdParty/tasks.c:7589:18:pvTaskIncrementMutexHeldCount	2
 ../ThirdParty/tasks.c:7614:14:ulTaskGenericNotifyTake	9
 ../ThirdParty/tasks.c:7717:16:xTaskGenericNotifyWait	9
-../ThirdParty/tasks.c:7832:16:xTaskGenericNotify	14
+../ThirdParty/tasks.c:7832:16:xTaskGenericNotify	15
 ../ThirdParty/tasks.c:7952:16:xTaskGenericNotifyFromISR	17
 ../ThirdParty/tasks.c:8118:10:vTaskGenericNotifyGiveFromISR	9
 ../ThirdParty/tasks.c:8234:16:xTaskGenericNotifyStateClear	4

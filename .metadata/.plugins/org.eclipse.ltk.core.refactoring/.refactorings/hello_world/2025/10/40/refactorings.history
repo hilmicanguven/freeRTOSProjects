@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ThirdParty&apos; to &apos;hello_world&apos;" description="Move &apos;ThirdParty&apos; to &apos;hello_world&apos;" destination="/hello_world" element1="/tasksWithLeds/ThirdParty" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1759604202648" updateReferences="true"/>
+</session>

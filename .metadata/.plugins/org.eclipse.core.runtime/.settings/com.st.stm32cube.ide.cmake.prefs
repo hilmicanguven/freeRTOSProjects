@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+leds_with_tasks\:Debug/build=Debug
+leds_with_tasks\:Debug/generator=Unix Makefiles
+leds_with_tasks\:Debug/misc_command=-DCMAKE_TOOLCHAIN_FILE\=cubeide-gcc.cmake -DCMAKE_BUILD_TYPE\=Debug
+leds_with_tasks\:Debug/src=.

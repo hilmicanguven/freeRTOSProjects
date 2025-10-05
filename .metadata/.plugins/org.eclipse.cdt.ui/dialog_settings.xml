@@ -6,11 +6,37 @@
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="vInitPrioGroupValue"/>
+			<item value="LED_GREEN_PIN"/>
+			<item value="task1_handler"/>
+			<item value="SVC_Handler"/>
+			<item value="xTaskCreate"/>
+		</list>
 	</section>
 	<section name="CResourceRenameRefactoringInputPage">
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex" value="true"/>
 		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.browser.opentype.OpenTypeActionSettings">
+		<item key="show_namespaces" value="true"/>
+		<item key="show_classes" value="true"/>
+		<item key="show_structs" value="true"/>
+		<item key="show_typedefs" value="true"/>
+		<item key="show_enums" value="true"/>
+		<item key="show_unions" value="true"/>
+		<item key="show_functions" value="true"/>
+		<item key="show_variables" value="true"/>
+		<item key="show_enumerators" value="true"/>
+		<item key="show_macros" value="true"/>
+		<item key="show_lowlevel" value="true"/>
+		<item key="x" value="636"/>
+		<item key="y" value="0"/>
+		<item key="width" value="1189"/>
+		<item key="height" value="881"/>
 	</section>
 </section>

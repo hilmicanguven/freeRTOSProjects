@@ -1,10 +1,29 @@
-21:17:16 **** Incremental Build of configuration Debug for project hello_world ****
+14:04:17 **** Incremental Build of configuration Debug for project hello_world ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"D:/freeRTOS/rtos_workspace/hello_world/ThirdParty" -I"D:/freeRTOS/rtos_workspace/hello_world/ThirdParty/portable/GCC/ARM_CM4F" -I"D:/freeRTOS/rtos_workspace/hello_world/ThirdParty/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task1_handler':
+../Core/Src/main.c:332:14: warning: unused variable 'msg' [-Wunused-variable]
+  332 |         char msg[100];
+      |              ^~~
+../Core/Src/main.c: In function 'task2_handler':
+../Core/Src/main.c:351:14: warning: unused variable 'msg' [-Wunused-variable]
+  351 |         char msg[100];
+      |              ^~~
+../Core/Src/main.c: In function 'task3_handler':
+../Core/Src/main.c:367:14: warning: unused variable 'msg' [-Wunused-variable]
+  367 |         char msg[100];
+      |              ^~~
+arm-none-eabi-gcc -o "hello_world.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\freeRTOS\rtos_workspace\hello_world\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hello_world.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hello_world.elf
+ 
 arm-none-eabi-size   hello_world.elf 
+arm-none-eabi-objdump -h -S  hello_world.elf  > "hello_world.list"
    text	   data	    bss	    dec	    hex	filename
-  18788	    120	  79072	  97980	  17ebc	hello_world.elf
+  18528	    120	  79072	  97720	  17db8	hello_world.elf
 Finished building: default.size.stdout
  
+Finished building: hello_world.list
+ 
 
-21:17:17 Build Finished. 0 errors, 0 warnings. (took 314ms)
+14:04:18 Build Finished. 0 errors, 3 warnings. (took 1s.128ms)
 

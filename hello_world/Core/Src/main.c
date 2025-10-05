@@ -24,6 +24,7 @@
 #include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
+#include "projdefs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,6 +55,7 @@ static void MX_GPIO_Init(void);
 
 static void task1_handler(void* parameters);
 static void task2_handler(void* parameters);
+static void task3_handler(void* parameters);
 
 
 extern  void SEGGER_UART_init(uint32_t);
@@ -76,6 +78,7 @@ int main(void)
 
 	TaskHandle_t task1_handle;
 	TaskHandle_t task2_handle;
+	TaskHandle_t task3_handle;
 
 	BaseType_t status;
 
@@ -107,6 +110,10 @@ int main(void)
   configASSERT(status == pdPASS);
 
   status = xTaskCreate(task2_handler, "Task-2", 200, "Hello world from Task-2", 2, &task2_handle);
+
+  configASSERT(status == pdPASS);
+
+  status = xTaskCreate(task3_handler, "Task-3", 200, "Hello world from Task-3", 2, &task3_handle);
 
   configASSERT(status == pdPASS);
 
@@ -326,11 +333,15 @@ static void task1_handler(void* parameters)
 
 	while(1)
 	{
-		snprintf(msg,100,"%s\n", (char*)parameters);
+		HAL_GPIO_TogglePin(GPIOD, LD3_Pin);
+//		HAL_Delay(2000);
+		vTaskDelay(pdMS_TO_TICKS(1000));
+//		snprintf(msg,100,"%s\n", (char*)parameters);
 //		SEGGER_SYSVIEW_PrintfTarget(msg);
-		printf("task 1 \n\r");
-		taskYIELD();
+//		printf("task 1 \n\r");
+//		taskYIELD();
 	}
+
 
 }
 
@@ -340,10 +351,29 @@ static void task2_handler(void* parameters)
 	char msg[100];
 	while(1)
 	{
-		snprintf(msg,100,"%s\n", (char*)parameters);
+		HAL_GPIO_TogglePin(GPIOD, LD5_Pin);
+		// HAL_Delay(3000);
+		vTaskDelay(pdMS_TO_TICKS(2000));
+//		snprintf(msg,100,"%s\n", (char*)parameters);
 //		SEGGER_SYSVIEW_PrintfTarget(msg);
-		printf("task 2 \n\r");
-		taskYIELD();
+//		printf("task 2 \n\r");
+//		taskYIELD();
+	}
+
+}
+
+static void task3_handler(void* parameters)
+{
+	char msg[100];
+	while(1)
+	{
+		HAL_GPIO_TogglePin(GPIOD, LD4_Pin);
+		// HAL_Delay(1000);
+		vTaskDelay(pdMS_TO_TICKS(3000));
+//		snprintf(msg,100,"%s\n", (char*)parameters);
+//		SEGGER_SYSVIEW_PrintfTarget(msg);
+//		printf("task 2 \n\r");
+//		taskYIELD();
 	}
 
 }
