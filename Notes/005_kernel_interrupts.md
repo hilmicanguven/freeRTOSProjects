@@ -51,4 +51,20 @@ RTOS Tik Rate 1000 olarak ayarlandığında her 1 ms'de bir tick interrupt oluş
 peki bunu nerede ve kim tarafından ayarlıyoruz? bunun için
 
 
+# Priority (Task Priority vs Hardware Priority)
 
+Task priority, User Priority ve Application Priority, olarak da diyebiliriz. aslında bunlar "thread mode" da çalışan basit fonksiyonlar için verilen önceliklerdir. Hardware priority ise, Processor tarafından üretilen sistem exception'ları için verilen önceliklerdir. Genellikle bir "interrupt line'ın dan" işlemciye doğru yollar aracılığı ile üretilir. farklı mimarilerden mimariye göre değişir. çeşitli peripheral'lardan (ADC, UART, Timer vb) üretilebilir. "handler mode" da çalışırlar. 
+
+bu ikisi birbirinden oldukça farklı konseptdir.
+- Task Priortiy değeri yüksekse önceliği yüksektir. daha önemli ve öncelikli çalışır.
+- Interrupt Priortiy değeri yüksekse daha önceliği düşüktür.
+
+## Configurable freeRTOS Kernel Interrupt Priorites
+
+- freeRTOS da STM32F4XX için priority için 4-bit ayrılmış durumdadır. `__NVIC_PRIO_BITS` ile kaç olduğunu görebiliriz. bu durumda 16 tane farklı priority değeri belirleyebiliriz (0x00 en yüksek öncelikli, 0xf0 en düşük öncelikli). 1 byte'ın yalnızca MSB 4bit'i ile konfigüre edilebilir.
+- `configKERNEL_INTERRUPT_PRIORITY` , Kernel interruptları (sysTick, pendSV, SVC Handlers) için belirlenen priority değeridir. Verilebilecek en düşük sayısal değer verilmeye çalışılır.
+- `configMAX_SYSCALL_INTERRUPT_PRIORITY` (yeni freeRTOS da ismi farklı -> `configMAX_API_CALL_INTERRUPT_PRIORITY` ), freeRTOS içerisinde bazı fonksiyonlar "XXX_FromISR" ile biter. bunların bir ISR'den çağırılabilmesi için bu definiton'ın belirttiği değerden ISR'in priority değeri büyük olmamalıdır. yani bu priority'den daha yüksek önceliğe sahip olmalıdır (daha az sayısal değere sahip olmalıdır).
+- Bir örnek ile daha iyi açıklayalım. 8 priority level'e sahip bir işlemci düşünelim. priority 0 - en düşük öncelik ve priority 7 en yüksek öncelik. kernel interrupt'lara en yüksek önceliği veririz ve `configKERNEL_INTERRUPT_PRIORITY = 0` olsun. `configMAX_SYSCALL_INTERRUPT_PRIORITY = 4` olsun. priority eşik değeri.
+    - bu doğrultuda, "FromISR" ile biten API'leri çağıran bir ISR'ımız olsun. eğer bu API'leri çağırmak isterse Priority değeri 0-1-2-3-4 olmalıdır. yani eşik değerine eşit veya daha düşük önceliğe sahip olmalıdır. **_ÇÜNKÜ BU EŞİK DEĞERİNİN ÜSTÜNDEKİ ÖNCELİĞE SAHİP ISR'LAR KESİNLİKLE BAŞKA BİR ŞEY TARAFINDAN DELAY EDİLEMEMELİDİR_**
+- **Not:** "FromISR" ile biten freeRTOS API'lar interrupt safe olarak adlandırılır. ancak bu API'ler yeterli yüksek önceliğe (`configMAX_SYSCALL_INTERRUPT_PRIORITY` den daha ) sahip ISR'lar tarafından çağırılmamalıdır.
+- **Not:** cortex-m interrupt'lar default olarak 0(zero) set edilir. eğer interrupt safe freeRTOS API's kullanılacaksa default değeri ile bırakmayıp konfigüre ediniz..
