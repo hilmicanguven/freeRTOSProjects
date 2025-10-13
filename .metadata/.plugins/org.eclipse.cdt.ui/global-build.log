@@ -1,43 +1,28 @@
-14:50:26 **** Incremental Build of configuration Debug for project 005LED_Task_Notify ****
+21:46:46 **** Incremental Build of configuration Debug for project 006LED_Btn_ISR ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/freeRTOS/rtos_workspace/005LED_Task_Notify/ThirdParty" -I"D:/freeRTOS/rtos_workspace/005LED_Task_Notify/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/005LED_Task_Notify/ThirdParty/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'led_green_handler':
-../Core/Src/main.c:350:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-  350 |                 printf("Toggling green LED");
-      |                 ^~~~~~
-../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-   29 | #include "task.h"
-  +++ |+#include <stdio.h>
-   30 | 
-../Core/Src/main.c:350:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  350 |                 printf("Toggling green LED");
-      |                 ^~~~~~
-../Core/Src/main.c:350:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Core/Src/main.c: In function 'led_orange_handler':
-../Core/Src/main.c:372:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  372 |                 printf("Toggling orange LED");
-      |                 ^~~~~~
-../Core/Src/main.c:372:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-../Core/Src/main.c: In function 'led_red_handler':
-../Core/Src/main.c:394:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
-  394 |                 printf("Toggling red LED");
-      |                 ^~~~~~
-../Core/Src/main.c:394:17: note: include '<stdio.h>' or provide a declaration of 'printf'
-arm-none-eabi-gcc -o "005LED_Task_Notify.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\freeRTOS\rtos_workspace\005LED_Task_Notify\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005LED_Task_Notify.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 005LED_Task_Notify.elf
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I"D:/freeRTOS/rtos_workspace/006LED_Btn_ISR/ThirdParty/include" -I../Core/Inc -I"D:/freeRTOS/rtos_workspace/006LED_Btn_ISR/ThirdParty/include" -I"D:/freeRTOS/rtos_workspace/006LED_Btn_ISR/ThirdParty/portable/GCC/ARM_CM4F" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "006LED_Btn_ISR.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\freeRTOS\rtos_workspace\006LED_Btn_ISR\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="006LED_Btn_ISR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 006LED_Btn_ISR.elf
  
-arm-none-eabi-size   005LED_Task_Notify.elf 
-arm-none-eabi-objdump -h -S  005LED_Task_Notify.elf  > "005LED_Task_Notify.list"
+arm-none-eabi-size   006LED_Btn_ISR.elf 
+arm-none-eabi-objdump -h -S  006LED_Btn_ISR.elf  > "006LED_Btn_ISR.list"
    text	   data	    bss	    dec	    hex	filename
-  20316	    120	  79096	  99532	  184cc	005LED_Task_Notify.elf
+  16108	     28	 104356	 120492	  1d6ac	006LED_Btn_ISR.elf
 Finished building: default.size.stdout
  
-Finished building: 005LED_Task_Notify.list
+Finished building: 006LED_Btn_ISR.list
  
-14:50:32 **** Incremental Build of configuration Debug for project 005LED_Task_Notify ****
+21:46:50 **** Incremental Build of configuration Debug for project 006LED_Btn_ISR ****
 make -j8 all 
-arm-none-eabi-size   005LED_Task_Notify.elf 
+arm-none-eabi-size   006LED_Btn_ISR.elf 
    text	   data	    bss	    dec	    hex	filename
-  20316	    120	  79096	  99532	  184cc	005LED_Task_Notify.elf
+  16108	     28	 104356	 120492	  1d6ac	006LED_Btn_ISR.elf
+Finished building: default.size.stdout
+ 
+21:47:23 **** Incremental Build of configuration Debug for project 006LED_Btn_ISR ****
+make -j8 all 
+arm-none-eabi-size   006LED_Btn_ISR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16108	     28	 104356	 120492	  1d6ac	006LED_Btn_ISR.elf
 Finished building: default.size.stdout
  

@@ -68,3 +68,14 @@ bu ikisi birbirinden oldukça farklı konseptdir.
     - bu doğrultuda, "FromISR" ile biten API'leri çağıran bir ISR'ımız olsun. eğer bu API'leri çağırmak isterse Priority değeri 0-1-2-3-4 olmalıdır. yani eşik değerine eşit veya daha düşük önceliğe sahip olmalıdır. **_ÇÜNKÜ BU EŞİK DEĞERİNİN ÜSTÜNDEKİ ÖNCELİĞE SAHİP ISR'LAR KESİNLİKLE BAŞKA BİR ŞEY TARAFINDAN DELAY EDİLEMEMELİDİR_**
 - **Not:** "FromISR" ile biten freeRTOS API'lar interrupt safe olarak adlandırılır. ancak bu API'ler yeterli yüksek önceliğe (`configMAX_SYSCALL_INTERRUPT_PRIORITY` den daha ) sahip ISR'lar tarafından çağırılmamalıdır.
 - **Not:** cortex-m interrupt'lar default olarak 0(zero) set edilir. eğer interrupt safe freeRTOS API's kullanılacaksa default değeri ile bırakmayıp konfigüre ediniz..
+
+
+# Interrupt Safe APIs
+
+Neden ayrı API'lere ihtiyaç duyarız bunu incelemek gerekirse 
+- RTOS, çağıran task'ı blocked state'e geçirebilir ancak bunu ISR için değil de Task için yapılmasının bir mantığı olabilir ancak ISR için buna gerek yoktur. Kodları daha basit yapmak adına bu iki API'yi ayırır x() vs xFromISR()
+
+- bazı API'ler için gereksiz yere parametre eklemiş oluruz. aslında kullanılmaz. xSemaphoreTake() düşünürsek "xTicksToWait" parametresi interrupt için anlamsızdır çünkü ISR'i blocked state de tutmayız. xSemaphoreTakeFromISR() için de yine sadece bunda kullanılan parametre bulunur ve diğerine eklemek gereksizdir.
+
+Dezavantaj olarak,
+- 3rd parti uygulamaların içerisinde eğer xFromISR() kullanılmıyorsa kodu düzenleyip bunu yapacak şekilde güncellemek gerekir.
