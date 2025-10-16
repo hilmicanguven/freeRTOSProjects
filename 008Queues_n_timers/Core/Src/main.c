@@ -151,7 +151,9 @@ int main(void)
 
 	//Create software timers for LED effects
 	for(int i = 0 ; i < 4 ; i++)
+	{
 		handle_led_timer[i] = xTimerCreate("led_timer",pdMS_TO_TICKS(500),pdTRUE, (void*)(i+1),led_effect_callback);
+	}
 
 
 	rtc_timer = xTimerCreate ("rtc_report_timer",pdMS_TO_TICKS(1000),pdTRUE,NULL,rtc_report_callback);

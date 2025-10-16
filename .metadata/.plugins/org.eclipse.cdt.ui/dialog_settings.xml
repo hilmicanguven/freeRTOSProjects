@@ -9,6 +9,8 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="rtc_configure_date"/>
+			<item value="RTC_DateTypeDef"/>
 			<item value="HAL_UART_RxCpltCallback"/>
 			<item value="button_interrupt_handler"/>
 			<item value="traceISR_EXIT"/>

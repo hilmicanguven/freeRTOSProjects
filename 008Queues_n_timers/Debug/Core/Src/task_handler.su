@@ -1,8 +1,8 @@
 ../Core/Src/task_handler.c:21:6:menu_task	40	static
-../Core/Src/task_handler.c:77:6:led_task	40	static
-../Core/Src/task_handler.c:124:9:getnumber	24	static
-../Core/Src/task_handler.c:138:6:rtc_task	120	static
-../Core/Src/task_handler.c:347:6:print_task	32	static
-../Core/Src/task_handler.c:359:6:cmd_handler_task	48	static
-../Core/Src/task_handler.c:378:6:process_command	24	static
-../Core/Src/task_handler.c:408:5:extract_command	32	static
+../Core/Src/task_handler.c:83:6:led_task	40	static
+../Core/Src/task_handler.c:130:9:getnumber	24	static
+../Core/Src/task_handler.c:144:6:rtc_task	120	static
+../Core/Src/task_handler.c:353:6:print_task	32	static
+../Core/Src/task_handler.c:365:6:cmd_handler_task	48	static
+../Core/Src/task_handler.c:384:6:process_command	24	static
+../Core/Src/task_handler.c:414:5:extract_command	32	static

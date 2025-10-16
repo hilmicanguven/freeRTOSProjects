@@ -85,4 +85,12 @@ bir butona basıldığında interrupt oluşacak ve ISR çalışacak.
     }
     ```
 
-- 
+
+
+# ITM Console (Yardımcı Debug Aracı)
+
+ITM konsolu aktif ederek printf fonksiyonlarının doğrudan debugger aracılığı ile ITM konsoldan izleyebiliriz mesajları. bunun için
+- debug ayarlarından SWD enable edilir
+- SWD clock ayarı için, Cube IDE'de ki clock configuration sekmesinden "FCLK cortex clock" kısmına bakılarak debug ayarlarında seçilir
+
+sonrasında ITM konsolda mesajları görüyor olmamız gerekir.

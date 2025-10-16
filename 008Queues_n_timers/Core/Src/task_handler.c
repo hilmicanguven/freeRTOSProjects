@@ -34,15 +34,21 @@ void menu_task(void *param)
 								"Exit          ----> 2\n"
 								"Enter your choice here : ";
 
-	while(1){
+	while(1)
+	{
+		// this send operation sends menu message characters into "print queue"
+		// this queue is managed by print task (print task receive from that queue)
 		xQueueSend(q_print,&msg_menu,portMAX_DELAY);
 
 		//wait for menu commands
 		xTaskNotifyWait(0,0,&cmd_addr,portMAX_DELAY);
 		cmd = (command_t*)cmd_addr;
 
+		/** command length is one, only one character is valid and accepted */
 		if(cmd->len == 1)
 		{
+			// extract given command option from incoming data
+
 			option = cmd->payload[0] - 48;
 			switch(option)
 			{

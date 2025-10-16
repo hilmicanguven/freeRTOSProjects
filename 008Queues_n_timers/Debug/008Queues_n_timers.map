@@ -6083,7 +6083,7 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .comment       0x0000000000000043       0x44 ./common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/port.o
  .comment       0x0000000000000043       0x44 ./common/ThirdParty/FreeRTOS/portable/MemMang/heap_4.o
 
-.debug_info     0x0000000000000000    0x1671c
+.debug_info     0x0000000000000000    0x1671d
  .debug_info    0x0000000000000000      0x382 ./Core/Src/led_effect.o
  .debug_info    0x0000000000000382     0x18b2 ./Core/Src/main.o
  .debug_info    0x0000000000001c34      0x781 ./Core/Src/rtc.o
@@ -6093,24 +6093,24 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x00000000000048da      0x6d1 ./Core/Src/syscalls.o
  .debug_info    0x0000000000004fab      0x168 ./Core/Src/sysmem.o
  .debug_info    0x0000000000005113      0x512 ./Core/Src/system_stm32f4xx.o
- .debug_info    0x0000000000005625      0xd8e ./Core/Src/task_handler.o
- .debug_info    0x00000000000063b3       0x23 ./Core/Startup/startup_stm32f407vgtx.o
- .debug_info    0x00000000000063d6      0x948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_info    0x0000000000006d1e      0xd46 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_info    0x0000000000007a64      0x8e7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
- .debug_info    0x000000000000834b      0x6c3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_info    0x0000000000008a0e      0x8b1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_info    0x00000000000092bf      0x53a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
- .debug_info    0x00000000000097f9      0xc21 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o
- .debug_info    0x000000000000a41a     0x2948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_info    0x000000000000cd62     0x14ae ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_info    0x000000000000e210     0x2fb8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_info    0x00000000000111c8      0x2af ./common/ThirdParty/FreeRTOS/list.o
- .debug_info    0x0000000000011477     0x17d9 ./common/ThirdParty/FreeRTOS/queue.o
- .debug_info    0x0000000000012c50     0x2228 ./common/ThirdParty/FreeRTOS/tasks.o
- .debug_info    0x0000000000014e78      0xe4d ./common/ThirdParty/FreeRTOS/timers.o
- .debug_info    0x0000000000015cc5      0x582 ./common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/port.o
- .debug_info    0x0000000000016247      0x4d5 ./common/ThirdParty/FreeRTOS/portable/MemMang/heap_4.o
+ .debug_info    0x0000000000005625      0xd8f ./Core/Src/task_handler.o
+ .debug_info    0x00000000000063b4       0x23 ./Core/Startup/startup_stm32f407vgtx.o
+ .debug_info    0x00000000000063d7      0x948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_info    0x0000000000006d1f      0xd46 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_info    0x0000000000007a65      0x8e7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+ .debug_info    0x000000000000834c      0x6c3 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_info    0x0000000000008a0f      0x8b1 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_info    0x00000000000092c0      0x53a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+ .debug_info    0x00000000000097fa      0xc21 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.o
+ .debug_info    0x000000000000a41b     0x2948 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_info    0x000000000000cd63     0x14ae ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_info    0x000000000000e211     0x2fb8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_info    0x00000000000111c9      0x2af ./common/ThirdParty/FreeRTOS/list.o
+ .debug_info    0x0000000000011478     0x17d9 ./common/ThirdParty/FreeRTOS/queue.o
+ .debug_info    0x0000000000012c51     0x2228 ./common/ThirdParty/FreeRTOS/tasks.o
+ .debug_info    0x0000000000014e79      0xe4d ./common/ThirdParty/FreeRTOS/timers.o
+ .debug_info    0x0000000000015cc6      0x582 ./common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/port.o
+ .debug_info    0x0000000000016248      0x4d5 ./common/ThirdParty/FreeRTOS/portable/MemMang/heap_4.o
 
 .debug_abbrev   0x0000000000000000     0x3a1d
  .debug_abbrev  0x0000000000000000      0x1ca ./Core/Src/led_effect.o
