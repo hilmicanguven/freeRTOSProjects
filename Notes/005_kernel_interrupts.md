@@ -59,6 +59,8 @@ bu ikisi birbirinden oldukça farklı konseptdir.
 - Task Priortiy değeri yüksekse önceliği yüksektir. daha önemli ve öncelikli çalışır.
 - Interrupt Priortiy değeri yüksekse daha önceliği düşüktür.
 
+- **Not:** bir interrupt, priority'si daha düşük olsa bile bir Task'ı her zaman preempt edebilir. çünkü ISR handle modda çalışır.
+
 ## Configurable freeRTOS Kernel Interrupt Priorites
 
 - freeRTOS da STM32F4XX için priority için 4-bit ayrılmış durumdadır. `__NVIC_PRIO_BITS` ile kaç olduğunu görebiliriz. bu durumda 16 tane farklı priority değeri belirleyebiliriz (0x00 en yüksek öncelikli, 0xf0 en düşük öncelikli). 1 byte'ın yalnızca MSB 4bit'i ile konfigüre edilebilir.
